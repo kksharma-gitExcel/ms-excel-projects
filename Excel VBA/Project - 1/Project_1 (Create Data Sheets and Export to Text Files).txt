@@ -1,0 +1,12 @@
+Create Data Sheets and Export to Text Files
+
+Purpose:
+- Deletes all sheets except the default Sheet1.
+- Creates 3 new copies of Sheet1 and rename them as "Data Sheet - 1", "Data Sheet - 2", and "Data Sheet - 3".
+- Exports the content of each worksheet into separate text (.txt) files.
+- Saves all text files inside a newly created folder in the user's Documents directory.
+
+sub procedures:
+1. DeleteSheets: Deletes all sheets except Sheet1.
+2. Create_3_Sheets: Duplicates Sheet1 three times and renames them.
+3. CreateTextFile: Exports the data from each sheet into a text file (tab-delimited format).

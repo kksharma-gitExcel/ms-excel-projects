@@ -1,0 +1,29 @@
+Comment Summary Generator.
+------------------------------------------
+Purpose:
+* Clears existing comments.
+* Adds 30 random comments per worksheet.
+* Randomly sets comment visibility.
+* Creates a summary sheet with hyperlinks to each comment.
+
+Sub Procedures:
+----------------------
+=== 1. ClearComment (Optional SuppressMsg As Boolean) ===
+* Deletes all comments in all sheets.
+* Shows a message with total cleared (if not suppressed).
+
+=== 2. AddComments ===
+* Clears comments silently.
+* Adds 30 random comments to each sheet (excluding summary and control sheets).
+* Calls `RandomlyMakeCommentsVisible`.
+* Shows a success message.
+
+=== 3. RandomlyMakeCommentsVisible ===
+* Makes about half of all comments visible using random logic.
+
+=== 4. CreateCommentSummary ===
+* Deletes old summary (if exists) and creates a new one.
+* Lists all comments with author, address, visibility, text, and sheet name.
+* Adds clickable links to each comment and back to the summary.
+* Formats the summary table.
+* Deletes the summary sheet if no comments exist.

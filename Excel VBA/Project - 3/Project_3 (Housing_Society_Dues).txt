@@ -1,0 +1,20 @@
+Send Bulk Overdue Notices
+------------------------------------
+Purpose:
+* Loop through a list of members with overdue payments.
+* Creates personalized overdue notice documents using a Word template.
+* Replaces placeholder text in the template with member-specific details (name, flat number, amount due, and due date).
+* Saves each notice as a separate Word document in a specified folder on the desktop.
+* Deletes any previously generated notices before saving new ones.
+
+Sub Procedures:
+----------------------
+1. SendBulkOverdueNotice:
+   * Sets up and loops through a data range of members.
+   * Creates or resets the target folder for saving the documents.
+   * Opens a Word template for each member.
+   * Replaces placeholders with actual data.
+   * Saves and closes the personalized document.
+
+2. PerformFind:
+   * Replaces specific placeholder text in a Word document with actual values using Word's Find and Replace functionality.

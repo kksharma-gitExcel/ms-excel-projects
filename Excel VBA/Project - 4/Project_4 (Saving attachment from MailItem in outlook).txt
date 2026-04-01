@@ -1,0 +1,24 @@
+Save Outlook Attachments to Desktop Folder
+
+Purpose:
+
+* Connects to Outlook and processes mail items in the Inbox.
+* Creates a clean folder named **"SavedAttachment"** on the user's Desktop
+* Iterates through a limited number of mail items (200 or 300 depending on version).
+* Saves all attachments from each mail item into the specified folder.
+
+Sub Procedures:
+
+1. `SaveFirst200Attachments_V1`
+
+* Uses built-in VBA file functions (`Dir`, `Kill`, `RmDir`, `MkDir`) to manage the folder.
+* Deletes existing files inside `SavedAttachment` (if it exists), then removes and recreates the folder.
+* Loops through up to 200 MailItems in the Inbox.
+* Saves all attachments from each mail item using `Attachment.DisplayName`.
+
+2. `SaveFirst200Attachments_V2`
+
+* Uses `Scripting.FileSystemObject` (late bound) to manage folder operations.
+* If the `SavedAttachment` folder exists, it is completely deleted and recreated.
+* Loops through up to 300 MailItems in the Inbox.
+* Saves all attachments from each mail item using `Attachment.DisplayName`.

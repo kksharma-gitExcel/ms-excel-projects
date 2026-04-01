@@ -1,0 +1,41 @@
+
+Step-by-Step Data Cleaning Instructions for "Tranforming Bad Data to Good Data" Sheet
+--------------------------------------------------------------------------------------------------------------------------------------
+
+1. First Name & Last Name
+Issues: Mixed case, numbers added, all lowercase/uppercase.
+Solution: Remove digits and convert to "Proper Case"
+=PROPER(TEXTJOIN("",,FILTER(MID(BadData!A2,SEQUENCE(LEN(BadData!A2)),1),ISERROR(VALUE(MID(BadData!A2,SEQUENCE(LEN(BadData!A2)),1))),"")))
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2. Nationality
+Issues: Misspellings like “Indain”, empty cells.
+=>PROPER(IF(BadData!C2="","Indian",IF(BadData!C2="indain","Indian",BadData!C2)))
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3. Marital Status
+Issues: Variants like "n/a", "live-in", "unknown".
+=>IF(OR(BadData!D2="n/a",BadData!D2="unknown",BadData!D2="live-in"),"Other",PROPER(BadData!D2))
+--------------------------------------------------------------------------------------------------------------------------------------
+
+4. Phone Number
+Issues: Some have only 9 digits, or non-numeric entries.
+=>IF(LEN(BadData!E2)=10,BadData!E2,"")
+--------------------------------------------------------------------------------------------------------------------------------------
+
+5. State
+Issues: Some are lowercase or misspelled.
+=>PROPER(BadData!F2)
+--------------------------------------------------------------------------------------------------------------------------------------
+
+6. PIN Code
+Issues: Invalid lengths (Must be 6 digits) and non-numeric
+=>IF(AND(ISNUMBER(BadData!G2),LEN(BadData!G2)=6),BadData!G2,"")&""
+--------------------------------------------------------------------------------------------------------------------------------------
+
+7. Residence Address
+Issues: Incomplete address, only city in some cases.
+=>IF(LEN(BadData!H2)-LEN(SUBSTITUTE(BadData!H2," ",""))+1>=3,BadData!H2,"Incomplete Address")
+--------------------------------------------------------------------------------------------------------------------------------------
+Final Step:
+Save the Excel File.

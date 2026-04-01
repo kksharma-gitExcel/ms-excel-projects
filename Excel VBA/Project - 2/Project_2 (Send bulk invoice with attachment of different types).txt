@@ -1,0 +1,26 @@
+Send Bulk Invoices via Email with various Attachments types
+
+Purpose:
+- Loops through customer data on the "CustData" sheet.
+- Populates an "Invoice" sheet with customer-specific details.
+- Creates and displays Outlook emails with one of the following attachments per customer:
+  - Embedded image in email body
+  - Attached PNG image
+  - Attached PDF file
+- Saves image or PDF temporarily to Desktop, then deletes it after attaching.
+
+Sub procedures and functions:
+
+1. SendBulkInvoice
+   - Reads customer data from the "CustData" worksheet.  
+   - Fills out invoice fields on the "Invoice" sheet dynamically for each customer.  
+   - Depending on the value in cell `H3`, prepares and attaches a PDF or image file, or embeds the image directly in the email body.  
+   - Creates and displays an Outlook email for review for each customer.
+
+2. ImageAddress
+   - Converts a specified Excel range into a PNG image using a temporary chart object.  
+   - Saves the image on the user's Desktop and returns the full file path.
+
+3. PDFAddress
+   - Exports a specified Excel range as a PDF.  
+   - Saves the PDF to the user's Desktop and returns the full file path.
