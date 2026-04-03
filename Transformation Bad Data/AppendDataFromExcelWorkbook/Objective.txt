@@ -1,6 +1,6 @@
 Objective:
 ---------------
-We need append data from multiple Excel workbook
+We need to append data from multiple Excel workbook
 
 Basic Information and assumption:
 ----------------------------------------------
