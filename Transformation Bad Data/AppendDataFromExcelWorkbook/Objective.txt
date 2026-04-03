@@ -1,0 +1,22 @@
+Objective:
+---------------
+We need append data from multiple Excel workbook
+
+Basic Information and assumption:
+----------------------------------------------
+1. We have 5 Excel workbook, each workbook contains single Excel worksheet
+2. Each worksheet is named after the Year the data was collected.
+
+Report we need to make:
+----------------------------------
+a) Total units by Year - Pivot Table
+b) Total units by Product - Pivot Table
+c)  Total units by Country - Pivot Table
+d) Total units by MonthName - Bar Chart
+
+Tools used:
+---------------
+Power query : For transforming data like removing unncessary column (net cost equivalent, Price), adding necessary column (year, MonthName, Month Number)
+Power Pivot : To load the data, because it significantly reduces the Excel file size.
+Pivot Table : For summarizing the data
+Conditional Formatting : To show Top N Total Units
