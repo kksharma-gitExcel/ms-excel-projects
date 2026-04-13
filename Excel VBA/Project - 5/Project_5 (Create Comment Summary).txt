@@ -8,20 +8,20 @@ Purpose:
 
 Sub Procedures:
 ----------------------
-=== 1. ClearComment (Optional SuppressMsg As Boolean) ===
+1. ClearComment (Optional SuppressMsg As Boolean)
 * Deletes all comments in all sheets.
 * Shows a message with total cleared (if not suppressed).
 
-=== 2. AddComments ===
+2. AddComments
 * Clears comments silently.
 * Adds 30 random comments to each sheet (excluding summary and control sheets).
-* Calls `RandomlyMakeCommentsVisible`.
-* Shows a success message.
+* Calls "RandomlyMakeCommentsVisible".
+* Shows a success message box.
 
-=== 3. RandomlyMakeCommentsVisible ===
+3. RandomlyMakeCommentsVisible
 * Makes about half of all comments visible using random logic.
 
-=== 4. CreateCommentSummary ===
+4. CreateCommentSummary
 * Deletes old summary (if exists) and creates a new one.
 * Lists all comments with author, address, visibility, text, and sheet name.
 * Adds clickable links to each comment and back to the summary.
