@@ -28,7 +28,7 @@ This folder has 5 subfolders. Each subfolder contains two files:
 	* **Objective** : Converting data from single list format into a table format for each individual record.
 4. **Data Cleaning Using Excel Formula (Folder)**
 	* **Tools** : Dynamic array functions and various functions (`FILTER`, `LEN`, `LET`, `TEXTJOIN`)
-	* **Objective** : To demonstrate how to clean the data bring it into readable and proper format.
+	* **Objective** : To demonstrate how to clean the data to bring it into readable and proper format.
 	
 ---
 
