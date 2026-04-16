@@ -8,7 +8,7 @@ This repository **ms-excel-projects** contains the files and folders that shows 
 ### Project Breakdown
 #### 📂 Excel VBA
 This folder has 5 subfolders. Each subfolder contains two files:
-1. **Documentattion** : *Text File* that explains what is the purpose of that Excel file, Subroutines and function procedures that are used.
+1. **Documentation** : *Text File* that explains what is the purpose of that Excel file, Subroutines and function procedures that are used.
 2. **Application** : *Excel File* that shows the practical application and different ways using Excel VBA to achieve that objective.
 
 ---
